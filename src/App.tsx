@@ -12,8 +12,8 @@ export function App() {
     <Header/>
     <Routes>
         <Route path="/ECIT" element={<Home/>}/>
-        <Route path="/ECIT/sobre" element={<Sobre/>}/>
-        <Route path="/ECIT/blog" element={<Blog/>}/>
+        <Route path="/ECIT/Sobre" element={<Sobre/>}/>
+        <Route path="/ECIT/Blog" element={<Blog/>}/>
     </Routes>
     <Footer/>
    </BrowserRouter>

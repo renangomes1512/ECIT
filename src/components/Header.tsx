@@ -56,8 +56,8 @@ export function Header() {
                 <nav className={style.lista}>
                     <ul className={style.menu} ref={toggleColor}>
                         <li className={style.hideMobile}><a href="/ECIT" id='colorLink'>Início</a></li>
-                        <li className={style.hideMobile}><a href='/ECIT/sobre' id='colorLink'>Sobre</a></li>
-                        <li className={style.hideMobile}><a href="/ECIT/blog">Blog</a></li>
+                        <li className={style.hideMobile}><a href='/ECIT/Sobre' id='colorLink'>Sobre</a></li>
+                        <li className={style.hideMobile}><a href="/ECIT/Blog">Blog</a></li>
                         <li className={style.hideMobile}><a href="#">Galeria</a></li>
                         <li className={style.hideMobile}><a href="#">Pré-matrícula</a></li>
                         <img onClick={toggleMenu} src={menuIcon} className={style.hideDesktop} alt="menu" />
@@ -66,8 +66,8 @@ export function Header() {
                     <div ref={sidebarRef} className={style.sidebar} id='sidebar'>
                         <ul className={style.menu}>
                             <li><a href="/ECIT">Início</a></li>
-                            <li><a href='/ECIT/sobre'>Sobre</a></li>
-                            <li><a href="/ECIT/blog">Blog</a></li>
+                            <li><a href='/ECIT/Sobre'>Sobre</a></li>
+                            <li><a href="/ECIT/Blog">Blog</a></li>
                             <li><a href="#">Galeria</a></li>
                             <li><a href="#">Pré-matrícula</a></li>
                         </ul>

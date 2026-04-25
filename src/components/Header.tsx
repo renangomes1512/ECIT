@@ -50,14 +50,14 @@ export function Header() {
         <header>
             <div className={style.cabeçalho}>
                 <div>
-                    <h1><a href="/"  className={style.logo} >Escola lisboa</a></h1>
+                    <h1><a href="/ECIT"  className={style.logo} >Escola lisboa</a></h1>
                 </div>
                 {/* Navegação principal do site */}
                 <nav className={style.lista}>
                     <ul className={style.menu} ref={toggleColor}>
-                        <li className={style.hideMobile}><a href="/" id='colorLink'>Início</a></li>
-                        <li className={style.hideMobile}><a href='/sobre' id='colorLink'>Sobre</a></li>
-                        <li className={style.hideMobile}><a href="/blog">Blog</a></li>
+                        <li className={style.hideMobile}><a href="/ECIT" id='colorLink'>Início</a></li>
+                        <li className={style.hideMobile}><a href='/ECIT/sobre' id='colorLink'>Sobre</a></li>
+                        <li className={style.hideMobile}><a href="/ECIT/blog">Blog</a></li>
                         <li className={style.hideMobile}><a href="#">Galeria</a></li>
                         <li className={style.hideMobile}><a href="#">Pré-matrícula</a></li>
                         <img onClick={toggleMenu} src={menuIcon} className={style.hideDesktop} alt="menu" />
@@ -65,9 +65,9 @@ export function Header() {
                     
                     <div ref={sidebarRef} className={style.sidebar} id='sidebar'>
                         <ul className={style.menu}>
-                            <li><a href="/">Início</a></li>
-                            <li><a href='/sobre'>Sobre</a></li>
-                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/ECIT">Início</a></li>
+                            <li><a href='/ECIT/sobre'>Sobre</a></li>
+                            <li><a href="/ECIT/blog">Blog</a></li>
                             <li><a href="#">Galeria</a></li>
                             <li><a href="#">Pré-matrícula</a></li>
                         </ul>

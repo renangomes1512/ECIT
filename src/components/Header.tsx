@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import style from './Header.module.css';
 import menuIcon from "../assets/menu.svg";
+import { Link } from 'react-router';
 
 export function Header() {
     // Estado para controlar a visibilidade do menu lateral
@@ -55,21 +56,21 @@ export function Header() {
                 {/* Navegação principal do site */}
                 <nav className={style.lista}>
                     <ul className={style.menu} ref={toggleColor}>
-                        <li className={style.hideMobile}><a href="/ECIT" id='colorLink'>Início</a></li>
-                        <li className={style.hideMobile}><a href='/ECIT/Sobre' id='colorLink'>Sobre</a></li>
-                        <li className={style.hideMobile}><a href="/ECIT/Blog">Blog</a></li>
-                        <li className={style.hideMobile}><a href="#">Galeria</a></li>
-                        <li className={style.hideMobile}><a href="#">Pré-matrícula</a></li>
+                        <li className={style.hideMobile}><Link to="/ECIT" id='colorLink'>Início</Link></li>
+                        <li className={style.hideMobile}><Link to='/ECIT/Sobre' id='colorLink'>Sobre</Link></li>
+                        <li className={style.hideMobile}><Link to="/ECIT/Blog">Blog</Link></li>
+                        <li className={style.hideMobile}><Link to="#">Galeria</Link></li>
+                        <li className={style.hideMobile}><Link to="#">Pré-matrícula</Link></li>
                         <img onClick={toggleMenu} src={menuIcon} className={style.hideDesktop} alt="menu" />
                     </ul>
                     
                     <div ref={sidebarRef} className={style.sidebar} id='sidebar'>
                         <ul className={style.menu}>
-                            <li><a href="/ECIT">Início</a></li>
-                            <li><a href='/ECIT/Sobre'>Sobre</a></li>
-                            <li><a href="/ECIT/Blog">Blog</a></li>
-                            <li><a href="#">Galeria</a></li>
-                            <li><a href="#">Pré-matrícula</a></li>
+                            <li><Link to="/ECIT">Início</Link></li>
+                            <li><Link to='/ECIT/Sobre'>Sobre</Link></li>
+                            <li><Link to="/ECIT/Blog">Blog</Link></li>
+                            <li><Link to="#">Galeria</Link></li>
+                            <li><Link to="#">Pré-matrícula</Link></li>
                         </ul>
                     </div>
                 </nav>

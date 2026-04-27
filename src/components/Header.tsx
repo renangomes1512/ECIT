@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import { NavLink } from 'react-router';
 import style from './Header.module.css';
-import menuIcon from "../assets/menu.svg";
-import { Link } from 'react-router';
+import { menu } from "../assets"
 
 export function Header() {
     // Estado para controlar a visibilidade do menu lateral
@@ -34,15 +34,8 @@ export function Header() {
         }
     }, [])
 
-    const toggleColor = () => {
-        if(form.colorLink()){
-            form.colorLink()
-        }
-    }
-
     const form = {
-        sidebar: () => document.getElementById('sidebar'),
-        colorLink: () => document.getElementById('colorLink')
+        sidebar: () => document.getElementById('sidebar')
     }
     
     return (
@@ -50,27 +43,27 @@ export function Header() {
         <>
         <header>
             <div className={style.cabeçalho}>
-                <div>
+                <div className={style.cabeçalhoLogo}>
                     <h1><a href="/ECIT"  className={style.logo} >Escola lisboa</a></h1>
                 </div>
                 {/* Navegação principal do site */}
-                <nav className={style.lista}>
-                    <ul className={style.menu} ref={toggleColor}>
-                        <li className={style.hideMobile}><Link to="/ECIT" id='colorLink'>Início</Link></li>
-                        <li className={style.hideMobile}><Link to='/ECIT/Sobre' id='colorLink'>Sobre</Link></li>
-                        <li className={style.hideMobile}><Link to="/ECIT/Blog">Blog</Link></li>
-                        <li className={style.hideMobile}><Link to="#">Galeria</Link></li>
-                        <li className={style.hideMobile}><Link to="#">Pré-matrícula</Link></li>
-                        <img onClick={toggleMenu} src={menuIcon} className={style.hideDesktop} alt="menu" />
+                <nav>
+                    <ul className={style.menu}>
+                        <li className={style.hideMobile}><NavLink to="/ECIT" end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Início</NavLink></li>
+                        <li className={style.hideMobile}><NavLink to='/ECIT/Sobre' end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Sobre</NavLink></li>
+                        <li className={style.hideMobile}><NavLink to="/ECIT/Blog" end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Blog</NavLink></li>
+                        <li className={style.hideMobile}><NavLink to="#" end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Galeria</NavLink></li>
+                        <li className={style.hideMobile}><NavLink to="#" end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Pré-matrícula</NavLink></li>
+                        <img onClick={toggleMenu} src={menu} className={style.hideDesktop} alt="menu" />
                     </ul>
-                    
+                    {/*navegação mobile*/}
                     <div ref={sidebarRef} className={style.sidebar} id='sidebar'>
                         <ul className={style.menu}>
-                            <li><Link to="/ECIT">Início</Link></li>
-                            <li><Link to='/ECIT/Sobre'>Sobre</Link></li>
-                            <li><Link to="/ECIT/Blog">Blog</Link></li>
-                            <li><Link to="#">Galeria</Link></li>
-                            <li><Link to="#">Pré-matrícula</Link></li>
+                            <li><NavLink to="/ECIT" end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Início</NavLink></li>
+                            <li><NavLink to='/ECIT/Sobre' end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Sobre</NavLink></li>
+                            <li><NavLink to="/ECIT/Blog" end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Blog</NavLink></li>
+                            <li><NavLink to="#" end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Galeria</NavLink></li>
+                            <li><NavLink to="#" end style={({ isActive }) => ({color: isActive ? "#1c60fc" : "black", fontWeight: isActive ? "bold" : "", textDecoration: "none"})}>Pré-matrícula</NavLink></li>
                         </ul>
                     </div>
                 </nav>

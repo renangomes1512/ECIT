@@ -1,8 +1,6 @@
 import style from './Home.module.css';
-import graduationIcon from '../assets/graduation.svg'
-import groupIcon from '../assets/group.svg'
-import bookIcon from '../assets/book.svg'
-import trophyIcon from '../assets/trophy.svg'
+import { img1, img2, img3, book, graduation, group, trophy } from "../assets";
+import { Link } from 'react-router';
 
 export function Home(){
     return(
@@ -23,35 +21,62 @@ export function Home(){
                     <h1>Por que escolher a Escola Lisboa?</h1>
                     <div className={style.cardsGroup}>
                         <div className={style.cardImg}>
-                            <img src={graduationIcon} alt="graduation" />
+                            <img src={graduation} alt="graduation" />
                             <h2>Excelência Acadêmica</h2>
                             <p>Currículo completo e professores qualificados para garantir o melhor aprendizado</p>
                         </div>
                         <div className={style.cardImg}>
-                            <img src={groupIcon} alt="group" />
+                            <img src={group} alt="group" />
                             <h2>Comunidade Ativa</h2>
                             <p>Ambiente acolhedor onde todos participam do crescimento dos alunos</p>
                         </div>
                         <div className={style.cardImg}>
-                            <img src={bookIcon} alt="book" />
+                            <img src={book} alt="book" />
                             <h2>Infraestrutura Moderna</h2>
                             <p>Biblioteca, laboratórios e recursos tecnológicos de ponta</p>
                         </div>
                         <div className={style.cardImg}>
-                            <img src={trophyIcon} alt="trophy" />
+                            <img src={trophy} alt="trophy" />
                             <h2>Atividades Extras</h2>
                             <p>Esportes, artes, música e muito mais para desenvolvimento completo</p>
                         </div>
                     </div>
                 </div>
-                <div className={style.cardNews}>
-                    <div>
-                        <h2>Últimas notícias</h2>
-                        <a href="/Blog">Ver todas</a>
+                <div className={style.containerNews}>
+                    <div className={style.cardNews}>
+                        <div className={style.news}>
+                            <div>
+                                <h1>Últimas notícias</h1>
+                            </div>
+                            <Link to="/ECIT/Blog">Ver todas</Link>
+                        </div>
                     </div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div className={style.cardImgNews}>
+                        <div className={style.newsImg}>
+                            <Link to="/ECIT/Blog">
+                                <img src={img1} alt="" className={style.img}/>
+                                <p className={style.txtDate}>xx-xx-xxxx</p>
+                                <h2>titulo</h2>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit facere ipsum sequi adipisci deleniti. Nesciunt reiciendis doloremque, illo provident recusandae inventore ipsam, vel sint doloribus incidunt tenetur ea maxime blanditiis.</p>
+                            </Link>
+                        </div>
+                        <div className={style.newsImg}>
+                            <Link to="/ECIT/Blog">
+                                <img src={img2} alt="" className={style.img} />
+                                <p className={style.txtDate}>xx-xx-xxxx</p>
+                                <h2>titulo</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo suscipit odit nesciunt eaque, quae tempora reprehenderit repudiandae laborum reiciendis temporibus rerum iure consectetur delectus alias deserunt facere porro blanditiis quia.</p>
+                            </Link>
+                        </div>
+                        <div className={style.newsImg}>
+                            <Link to="/ECIT/Blog">
+                                <img src={img3} alt="" className={style.img}/>
+                                <p className={style.txtDate}>xx-xx-xxxx</p>
+                                <h2>titulo</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo suscipit odit nesciunt eaque, quae tempora reprehenderit repudiandae laborum reiciendis temporibus rerum iure consectetur delectus alias deserunt facere porro blanditiis quia.</p>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 <div className={style.cardReg}>
                     

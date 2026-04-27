@@ -143,6 +143,11 @@ aside{
     gap: 15px;
 }
 
+.newsImg:active{
+    width: 350px;
+    height: auto;
+}
+
 .newsImg .img{
     width: 100%;
     height: auto;
@@ -194,7 +199,7 @@ aside{
     }
 
     .newsImg .img{
-        width: 400px;
+        width: 380px;
     }
 
 }

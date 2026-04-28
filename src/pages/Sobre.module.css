@@ -1,0 +1,66 @@
+.sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobreMain{
+    background-color: #1c60fc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 70px 20px 20px 20px;
+}
+
+.sobreLisboa{
+    color: white;
+    width: 1300px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1300px;
+    margin-bottom: 50px;
+}
+
+.container img{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+@media(max-width: 920px) {
+    .sobreMain{
+        text-align: center;
+    }
+    
+    .container{
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .container img{
+        width: 100%
+    }
+
+}

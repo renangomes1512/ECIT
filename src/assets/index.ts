@@ -7,6 +7,10 @@ import group from "./group.svg"
 import trophy from "./trophy.svg"
 import menu from "./menu.svg"
 import lisboa from "./lisboa.webp"
+import insignia from "./insignia.svg"
+import coracao from "./coracao.svg"
+import lampada from "./lampada.svg"
+import alvo from "./alvo.svg"
 
 export{
     img1,
@@ -17,5 +21,9 @@ export{
     group,
     trophy,
     menu,
-    lisboa
+    lisboa,
+    insignia,
+    coracao,
+    lampada,
+    alvo
 }

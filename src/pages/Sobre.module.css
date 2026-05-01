@@ -9,7 +9,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     padding: 70px 20px 20px 20px;
 }
 
@@ -38,7 +38,7 @@
     justify-content: center;
     gap: 20px;
     max-width: 1300px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .container img{
@@ -47,20 +47,121 @@
     border-radius: 10px;
 }
 
+.valores{
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
 
+.valores .cardVal{
+    display: flex;
+    gap: 140px;
+}
+
+.cardVal .val{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.val img{
+    width: 50px;
+}
+
+.infra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1300px;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.infra .cardInfra{
+    display: flex;
+    gap: 30px;
+}
+
+.cardInfra .divInfra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 20px;
+}
+
+.divInfra img{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.divInfra .txtInfra{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.equipe{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 100px;
+}
 
 @media(max-width: 920px) {
     .sobreMain{
         text-align: center;
+        margin-bottom: 50px;
     }
     
     .container{
         flex-direction: column;
         width: 95%;
+        margin-bottom: 50px;
     }
 
     .container img{
         width: 100%
     }
 
+    .valores{
+        width: 95%;
+        margin-bottom: 50px;
+    }
+
+    .valores .cardVal{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .infra{
+        width: 95%;
+        margin-bottom: 50px;
+    }
+
+    .cardInfra{
+        flex-direction: column;
+    }
+
+    .equipe{
+        width: 95%;
+        margin-bottom: 50px;
+    }
 }
+
+@media(min-width: 800px) and (max-width: 1024px){
+    .divInfra img{
+        width: 75%;
+        height: auto;
+    }
+}
+

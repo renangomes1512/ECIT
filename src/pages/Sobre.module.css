@@ -1,73 +1,110 @@
-.sobre{
+.main{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.sobreMain{
-    background-color: #1c60fc;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-    padding: 70px 20px 20px 20px;
-}
-
-.sobreLisboa{
-    color: white;
-    width: 1300px;
-    height: 230px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    font-size: 20px;
-}
-
-.historia{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 50px;
 }
 
-.container{
+.section{
+    border: 1px solid;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1300px;
-    margin-bottom: 100px;
+
+    width: 95%;
 }
 
-.container img{
-    width: 700px;
-    height: auto;
-    border-radius: 10px;
+.sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 250px;
+    padding-top: 50px;
+
+    background-color: #1c60fc;
+    color: white;
+}
+
+.txtSobre{
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    width: 95%;
+}
+
+.historia{
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+.container{
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.container .imgLisboa{
+    border: 1px solid;
+    width: 100%;
+}
+
+.imgLisboa img{
+    border-radius: 20px;
+    width: 100%;
+}
+
+.txtHistoria{
+    width: 100%;
+}
+
+.txtHistoria p{
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+
+    line-height: 1.6;
+    gap: 10px;
+    
+    font-size: 14px;
 }
 
 .valores{
     display: flex;
     flex-direction: column;
-    width: 1300px;
     align-items: center;
-    gap: 50px;
-    margin-bottom: 100px;
 }
 
-.valores .cardVal{
-    display: flex;
-    gap: 140px;
-}
-
-.cardVal .val{
+.cardVal{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.val{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 15px;
+
+    gap: 10px;
+    width: 100%;
 }
 
 .val img{
@@ -78,90 +115,94 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1300px;
-    gap: 50px;
-    margin-bottom: 100px;
 }
 
-.infra .cardInfra{
+.cardInfra{
+    border: 1px solid;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 30px;
+
+    width: 100%;
+    margin-top: 50px;
 }
 
-.cardInfra .divInfra{
+.divInfra{
+    border: 1px solid;
     display: flex;
     flex-direction: column;
-    align-items: center;   
-    gap: 20px;
+    
+    gap: 15px;
+    width: 100%;
 }
 
-.divInfra img{
-    width: 400px;
-    height: 250px;
-    border-radius: 10px;
+.cardInfra img{
+    border-radius: 15px;
+    width: 100%;
 }
 
-.divInfra .txtInfra{
+.txtInfra{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .equipe{
-    width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
     text-align: center;
-    margin-bottom: 100px;
+
+    margin-bottom: 50px;
 }
 
-@media(max-width: 920px) {
-    .sobreMain{
-        text-align: center;
-        margin-bottom: 50px;
-    }
+.txtEquipe{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.txtEquipe p{
+    display: flex;
+    flex-direction: column;
     
-    .container{
-        flex-direction: column;
-        width: 95%;
-        margin-bottom: 50px;
-    }
+    gap: 30px;
+}
 
-    .container img{
-        width: 100%
-    }
-
-    .valores{
-        width: 95%;
-        margin-bottom: 50px;
-    }
-
-    .valores .cardVal{
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .infra{
-        width: 95%;
-        margin-bottom: 50px;
+@media screen and (min-width: 1024px) {
+    .cardVal{
+        flex-direction: row;
     }
 
     .cardInfra{
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        
     }
 
-    .equipe{
-        width: 95%;
-        margin-bottom: 50px;
+    .divInfra{
+        width: 400px;
+        justify-content: center;
+    }
+
+    .txtEquipe{
+        width: 800px;
     }
 }
 
-@media(min-width: 800px) and (max-width: 1024px){
-    .divInfra img{
-        width: 75%;
-        height: auto;
+@media screen and (min-width: 1440px) {
+    .section{
+        width: 1300px;
     }
+
+    .sobre{
+        justify-content: center;
+    }
+
+    .txtSobre{
+        width: 1300px;
+    }
+
 }
 
